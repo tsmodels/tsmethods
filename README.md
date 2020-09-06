@@ -2,5 +2,8 @@
 
 
 # tsmethods
-Foundation packages with general methods/classes used by other ts packages as well as plotting for prediction and distribution classes conforming to the current probabilistic framework. Also includes functions for ensembling using a copula methodology.
+Foundation packages with general methods/classes used by other **tsmodels** packages as well as plotting for prediction and distribution classes conforming to the current probabilistic framework. Also includes functions for ensembling using a copula methodology.
 
+## Installation
+
+For installation instructions and vignettes for **tsmodels** packages, see https://tsmodels.github.io/.
