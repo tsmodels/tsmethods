@@ -40,7 +40,7 @@ tscor <- function(object, ...)
 }
 tsreport <- function(object, ...)
 {
-  UseMethod("report")
+  UseMethod("tsreport")
 }
 tsprofile <- function(object , ...)
 {

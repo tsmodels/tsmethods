@@ -1,0 +1,3 @@
+# 2020-11-16 v0.1.5 [AG]
+- Fix to tsreport method (previously dispatched to report rather than tsreport).
+- Added Changelog to package
