@@ -1,3 +1,7 @@
+# 2021-04-20 v0.1.6 [AG]
+- Fix to prediction plots to allow missing values in observed series (ylim 
+fixed for na.rm)
+
 # 2020-11-16 v0.1.5 [AG]
 - Fix to tsreport method (previously dispatched to report rather than tsreport).
 - Added Changelog to package

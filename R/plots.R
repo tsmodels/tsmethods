@@ -89,7 +89,7 @@ plot.tsmodel.predict <- function(x, y = NULL, plot_original = TRUE, median_color
   lasttimebeforeprediction = max(which(time < date_form(colnames(prediction$distribution))[1]))
 
   if (is.null(ylim)) {
-    ylim <- range(quantile_matrix, original_series)
+    ylim <- range(quantile_matrix, original_series, na.rm = TRUE)
   }
   if (plot_original) {
     # Pre-append original series date
