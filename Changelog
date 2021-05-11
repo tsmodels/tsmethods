@@ -1,3 +1,8 @@
+# 2021-05-20 v0.1.7 [AG]
+- Added additional estimate_ad method for new plugin packages which use
+automatic differentiation.
+- Fix to tsgrowth documentation
+
 # 2021-04-20 v0.1.6 [AG]
 - Fix to prediction plots to allow missing values in observed series (ylim 
 fixed for na.rm)

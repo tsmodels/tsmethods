@@ -6,7 +6,8 @@ importFrom("grDevices", "gray","colorRampPalette","n2mfrow","col2rgb", "rgb")
 importFrom("zoo","coredata","index","zoo")
 importFrom("xts","endpoints","xts")
 export("estimate","tsdecompose","tsmetrics","tsensemble","ensemble_modelspec","tsfilter","tsbacktest","tsreport",
-       "tscor","tscov","tsdiagnose","tsprofile","tsspec","tsautoselect","tsspec","tsbenchmark","tsaggregate","tsconvert","tsequation","tsgrowth")
+       "tscor","tscov","tsdiagnose","tsprofile","tsspec","tsautoselect","tsspec","tsbenchmark",
+       "tsaggregate","tsconvert","tsequation","tsgrowth","estimate_ad")
 S3method("plot","tsmodel.distribution")
 S3method("plot","tsmodel.predict")
 S3method("tsgrowth","tsmodel.predict")

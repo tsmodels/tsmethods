@@ -74,3 +74,7 @@ tsgrowth <- function(object, ...)
 {
   UseMethod("tsgrowth")
 }
+estimate_ad <- function(object, ...)
+{
+  UseMethod("estimate_ad")
+}

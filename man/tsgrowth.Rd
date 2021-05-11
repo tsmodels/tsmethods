@@ -9,14 +9,14 @@ Calculates the growth distribution from a predicted object.
 }
 \usage{
 tsgrowth(object, \ldots)
-\method{tsgrowth}{tsmodel.predict}(object, n = 1, 
+\method{tsgrowth}{tsmodel.predict}(object, d = 1, 
 type = c("diff","simple","log"),  \dots)
 }
 \arguments{
 \item{object}{
 An object of some S3 class.
 }
-\item{n}{
+\item{d}{
 The period back to look at for growth calculations.
 }
 \item{type}{
