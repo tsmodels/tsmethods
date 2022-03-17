@@ -1,3 +1,6 @@
+# 2022-03-16 v0.1.8 [AG]
+- Added a tscalibrate method
+
 # 2021-05-20 v0.1.7 [AG]
 - Added additional estimate_ad method for new plugin packages which use
 automatic differentiation.

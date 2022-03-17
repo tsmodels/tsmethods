@@ -78,3 +78,7 @@ estimate_ad <- function(object, ...)
 {
   UseMethod("estimate_ad")
 }
+tscalibrate <- function(object, ...)
+{
+  UseMethod("tscalibrate")
+}
