@@ -82,3 +82,7 @@ tscalibrate <- function(object, ...)
 {
   UseMethod("tscalibrate")
 }
+tsmoments <- function(object, ...)
+{
+  UseMethod("tsmoments")
+}

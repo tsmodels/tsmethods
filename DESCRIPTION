@@ -1,7 +1,7 @@
 Package: tsmethods
 Type: Package
 Title: Time Series Methods
-Version: 0.1.8
+Version: 0.3.0
 Author: alexios galanos
 Maintainer: alexios galanos <alexios@4dscape.com>
 Description: Common methods for use in a time series probabilistic framework.

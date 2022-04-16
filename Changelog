@@ -1,3 +1,8 @@
+# 2022-04-15 v0.3.0 [AG]
+- Added a tsmoments method
+- Bumped the version to 0.3.0 to be consistent with major changes in other 
+packages with the same version.
+
 # 2022-03-16 v0.1.8 [AG]
 - Added a tscalibrate method
 
