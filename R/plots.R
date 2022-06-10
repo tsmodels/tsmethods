@@ -1,3 +1,46 @@
+#' Plots of predictive distributions
+#'
+#' @description Plots for objects generated from probabilistic models returning 
+#' a forecast distribution.
+#' @param x an object of class \dQuote{tsmodel.distribution} or \dQuote{tsmodel.predict}.
+#' @param y not used.
+#' @param median_color the color used for plotting the median value.
+#' @param median_type the line type for the median.
+#' @param median_width the width of the median line.
+#' @param interval_quantiles the quantiles to include in the plot.
+#' @param gradient_color the gradient color to use for the distribution.
+#' @param interval_color the color of the quantile lines.
+#' @param interval_type the line type for the quantiles.
+#' @param interval_width the width of the quantile lines.
+#' @param ylim user specified limits for the y-axis.
+#' @param ylab user specified label for y-axis.
+#' @param n_x the number of time periods from the end to plot for x.
+#' @param x_axes whether to print the x-axis (usually time/date).
+#' @param add whether to overlay another \dQuote{tsmodel.distribution} on top 
+#' of a current plot. This will only plot the median and quantiles and not the full 
+#' distribution with gradient color.
+#' @param zero_out whether to zero any negative value in the prediction intervals.
+#' @param date_class when overlaying (add argument) one distribution 
+#' (\dQuote{tsmodel.distribution} on top of another, particularly if it is added 
+#' to a plot based on \dQuote{tsmodel.predict}, then in order for this to work 
+#' correctly the two date classes have to be the same. The \dQuote{tsmodel.predict} 
+#' plot method infers the class from the original time series which is contained in 
+#' the object. Since the \dQuote{tsmodel.distribution} carries no additional 
+#' information other than the column names of the date/time stamps, then it is 
+#' upto the user to supply what this should be.
+#' @note Any matrix representing a distribution of values at points in time, 
+#' with time in the columns (date labels in columns) and the distribution in rows 
+#' can be set to class \dQuote{tsmodel.distribution} and then passed to the plot 
+#' function which can generate a nice distribution plot. The \dQuote{tsmodel.predict} 
+#' is a list with the posterior predictive (or simulated) distribution 
+#' (the \dQuote{tsmodel.distribution}) in addition to the original series 
+#' (original.series) of class zoo or xts.
+#' @method plot tsmodel.distribution
+#' @rdname plot
+#' @aliases tsmodel.distribution tsmodel.predict
+#' @export
+#'
+#
 plot.tsmodel.distribution <- function(x, y = NULL, median_color = "black", median_type = 1, median_width = 3,
                                    interval_quantiles = c(0.025, 0.975), gradient_color = "steelblue",
                                    interval_color = "cyan", interval_type = 2, interval_width = 2,
@@ -47,6 +90,14 @@ plot.tsmodel.distribution <- function(x, y = NULL, median_color = "black", media
 }
 
 
+#' @param plot_original whether to include the original dataset in the plot.
+#' @param n_original the number of time periods from the end to plot for the 
+#' original series. Defaults to plotting the whole series.
+#' @param ... additional arguments to the plot.default function.
+#' @method plot tsmodel.predict
+#' @rdname plot
+#' @aliases plot.tsmodel.distribution tsmodel.predict
+#' @export
 plot.tsmodel.predict <- function(x, y = NULL, plot_original = TRUE, median_color = "black", median_type = 1,
                               median_width = 3, interval_quantiles = c(0.025, 0.975),
                               gradient_color = "steelblue", interval_color = "cyan",

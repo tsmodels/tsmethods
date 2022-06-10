@@ -1,3 +1,19 @@
+#' Ensemble specification
+#'
+#' @description Creates and validates an ensemble specification.
+#' @param ... objects of either all of class \dQuote{tsmodel.predict} or 
+#' \dQuote{tsmodel.distribution} representing the probabilistic forecasts for 
+#' the same horizon of optionally different models on the same series and with 
+#' same number of draws. It is expected that the predictive distributions are 
+#' based on joint simulated draws passed to the \code{innov} argument in 
+#' the \code{predict} function of the supporting models. Instead of \ldots 
+#' it is also possible to pass a list of the objects.
+#' @return An object of class \dQuote{ensemble.spec}.
+#' @aliases ensemble_modelspec
+#' @rdname ensemble_modelspec
+#' @export
+#'
+#'
 ensemble_modelspec <- function(...)
 {
     m <- list(...)
@@ -47,6 +63,16 @@ ensemble_modelspec <- function(...)
     return(out)
 }
 
+#' @method tsensemble ensemble.spec
+#' @details Returns the weighted distribution, under the assumption that the 
+#' predictions were generated using a joint error distribution whose values were 
+#' passed to the \code{innov} argument of the predict function used for each model.
+#' @return An object of class \dQuote{tsmodel.predict} or \dQuote{tsmodel.distribution} 
+#' depending on the input class in \code{\link{ensemble_modelspec}}.
+#' @rdname tsensemble
+#' @export
+#'
+#
 tsensemble.ensemble.spec <- function(object, weights = NULL, ...)
 {
     n <- dim(object$distribution)[3]
@@ -73,6 +99,18 @@ tsensemble.ensemble.spec <- function(object, weights = NULL, ...)
     return(L)
 }
 
+
+#' @param object an object.
+#' @param d the period back to look at for growth calculations.
+#' @param type the type of growth calculation. \dQuote{diff} is simply the 
+#' difference in values over n periods, \dQuote{simple} if the 
+#' rate of change and \dQuote{log} the difference in logs.
+#' @param ... additional parameters passed to the method.
+#' @method tsgrowth tsmodel.predict
+#' @rdname tsgrowth
+#' @export
+#'
+#
 tsgrowth.tsmodel.predict <- function(object, d = 1, type = c("diff","simple","log"), ...)
 {
     Z <- matrix(coredata(object$original_series), ncol = length(object$original_series), nrow = nrow(object$distribution), byrow = TRUE)

@@ -3,8 +3,9 @@
 .git
 .DS_Store
 .vscode
-LICENSE
 README.md
 cleanup
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^codecov\.yml$
+^\.github$

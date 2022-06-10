@@ -17,6 +17,6 @@ For installation instructions and vignettes for **tsmodels** packages, see https
 
 [x] Create tsanimate method for animating walkthrough in tsbacktest output.
 
-[x] Convert documentation to roxygen.
+[x] Convert documentation to roxygen [ongoing]
 
 [x] Enhance tsconvert method to generate SEM model from MEM and add appendix in vignette for proof based on Casals et al. paper (James Nesbit).
