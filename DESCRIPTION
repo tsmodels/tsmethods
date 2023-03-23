@@ -1,7 +1,7 @@
 Package: tsmethods
 Type: Package
 Title: Time Series Methods
-Version: 0.3.1
+Version: 0.3.2
 Author: alexios galanos
 Maintainer: alexios galanos <alexios@4dscape.com>
 Description: Common methods for use in a time series probabilistic framework.
@@ -10,4 +10,4 @@ Imports: methods, zoo, xts
 Encoding: UTF-8
 LazyData: true
 Repository: tsmethods
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3

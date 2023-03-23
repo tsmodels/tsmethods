@@ -3,7 +3,7 @@
 .git
 .DS_Store
 .vscode
-README.md
+README.Rmd
 cleanup
 ^.*\.Rproj$
 ^\.Rproj\.user$

@@ -316,3 +316,56 @@ tsmoments <- function(object, ...)
 {
   UseMethod("tsmoments")
 }
+
+#' Unconditional Value
+#'
+#' @description General method the unconditional value of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @return A scalar of the unconditional value.
+#' @aliases unconditional
+#' @rdname unconditional
+#' @export
+#'
+#
+unconditional <- function(object, ...)
+{
+    UseMethod("unconditional")
+}
+
+#' Probability Integral Transform (PIT)
+#'
+#' @description Calculates and returns the conditional probability integral
+#' transform given the data and estimated density
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @return An xts vector of the conditional probabilities.
+#' @details The PIT is essentially the probabilities returned from the cumulative
+#' distribution function (*p) given the data and estimated value of the mean,
+#' conditional standard deviation and any other distributional parameters.
+#' @aliases pit
+#' @rdname pit
+#' @export
+#'
+#
+pit <- function(object, ...)
+{
+    UseMethod("pit")
+}
+
+#' Half Life
+#'
+#' @description Calculates and returns the half-life of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @details The half life is defined as the period it
+#' takes a series  to reach half its long-term average values.
+#' @aliases halflife
+#' @rdname halflife
+#' @export
+#'
+#
+halflife <- function(object, ...)
+{
+    UseMethod("halflife")
+}

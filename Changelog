@@ -1,3 +1,7 @@
+# 2023-03-23 v0.3.2 [AG]
+- Added additional methods of halflife, unconditional and pit for use with
+tsgarch and tsarma.
+
 # 2022-06-09 v0.3.1 [AG]
 - Converted documentation to Roxygen and performed some clean up.
 
