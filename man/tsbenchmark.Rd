@@ -11,6 +11,10 @@ tsbenchmark(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+An object holding the model benchmark which can be printed
+and referenced.
+}
 \description{
-Time Series Model Benchmarking
+Generic method for benchmarking models.
 }

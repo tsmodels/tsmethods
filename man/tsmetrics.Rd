@@ -11,6 +11,9 @@ tsmetrics(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The performance metrics.
+}
 \description{
-Generates time series performance metrics.
+Generic method for generating time series performance metrics.
 }

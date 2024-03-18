@@ -8,7 +8,7 @@
 #' based on joint simulated draws passed to the \code{innov} argument in 
 #' the \code{predict} function of the supporting models. Instead of \ldots 
 #' it is also possible to pass a list of the objects.
-#' @return An object of class \dQuote{ensemble.spec}.
+#' @returns An object of class \dQuote{ensemble.spec}.
 #' @aliases ensemble_modelspec
 #' @rdname ensemble_modelspec
 #' @export
@@ -67,7 +67,7 @@ ensemble_modelspec <- function(...)
 #' @details Returns the weighted distribution, under the assumption that the 
 #' predictions were generated using a joint error distribution whose values were 
 #' passed to the \code{innov} argument of the predict function used for each model.
-#' @return An object of class \dQuote{tsmodel.predict} or \dQuote{tsmodel.distribution} 
+#' @returns An object of class \dQuote{tsmodel.predict} or \dQuote{tsmodel.distribution} 
 #' depending on the input class in \code{\link{ensemble_modelspec}}.
 #' @rdname tsensemble
 #' @export
@@ -106,6 +106,7 @@ tsensemble.ensemble.spec <- function(object, weights = NULL, ...)
 #' difference in values over n periods, \dQuote{simple} if the 
 #' rate of change and \dQuote{log} the difference in logs.
 #' @param ... additional parameters passed to the method.
+#' @returns an object of class \dQuote{tsmodel.predict} transformed to a growth distribution.
 #' @method tsgrowth tsmodel.predict
 #' @rdname tsgrowth
 #' @export

@@ -2,7 +2,7 @@
 % Please edit documentation in R/methods.R
 \name{tsmoments}
 \alias{tsmoments}
-\title{Analytic Forecast Moments}
+\title{Analytic Moments}
 \usage{
 tsmoments(object, ...)
 }
@@ -11,7 +11,10 @@ tsmoments(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The moments of the class it was applied to (e.g. estimated or predicted object).
+}
 \description{
-here available, returns the analytic (or approximated) moments 
-of the forecast (usually mean and variance).
+Generic method for generating the analytic (or approximated) moments 
+of the model or forecast (usually mean and variance).
 }

@@ -11,6 +11,9 @@ tsreport(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+An object holding a ready to parse report.
+}
 \description{
-Generates reports in different output formats.
+Generic method for generating reports in different output formats.
 }

@@ -11,8 +11,11 @@ tsaggregate(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The aggregated distribution.
+}
 \description{
-General aggregation method for both observed series as well 
-as certain models such as homogeneous coefficients whose dynamics aggregate (see 
-tsvets for an example).
+Generic method for aggregating of both observed series as well 
+as certain models such as homogeneous coefficients whose dynamics aggregate (such
+as in the Vector ETS model).
 }

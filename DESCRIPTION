@@ -1,13 +1,17 @@
 Package: tsmethods
 Type: Package
 Title: Time Series Methods
-Version: 0.3.2
-Author: alexios galanos
-Maintainer: alexios galanos <alexios@4dscape.com>
-Description: Common methods for use in a time series probabilistic framework.
-License: GPL-2 | file LICENSE
+Version: 1.0.1
+Date: 2024-03-17
+Authors@R: c(person("Alexios", "Galanos", role = c("aut", "cre","cph"), email = "alexios@4dscape.com"))
+Maintainer: Alexios Galanos <alexios@4dscape.com>
+Description: Generic methods for use in a time series probabilistic framework, allowing for a common calling convention across packages. Additional methods for time series prediction ensembles and probabilistic plotting of predictions is included. A more detailed description is available at <https://www.nopredict.com/packages/tsmethods> which shows the currently implemented methods in the 'tsmodels' framework. 
+License: GPL-2
 Imports: methods, zoo, xts
 Encoding: UTF-8
 LazyData: true
-Repository: tsmethods
-RoxygenNote: 7.2.3
+URL: https://www.nopredict.com/packages/tsmethods, https://github.com/tsmodels/tsmethods
+RoxygenNote: 7.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

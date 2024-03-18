@@ -11,6 +11,10 @@ tsspec(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+A specification object extracted from an estimated or other
+model which retains this information.
+}
 \description{
-Extracts the specification object from an S3 object.
+Generic method for extracting the specification object from an S3 object.
 }

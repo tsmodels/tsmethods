@@ -11,6 +11,9 @@ tsdecompose(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+An object of the model decomposition.
+}
 \description{
-Decomposition of an estimated time series object.
+Generic method for decomposition of an estimated time series object.
 }

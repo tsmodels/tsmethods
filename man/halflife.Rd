@@ -11,10 +11,13 @@ halflife(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The half life of the model.
+}
 \description{
-Calculates and returns the half-life of a model.
+Generic method for calculating the half-life of a model.
 }
 \details{
 The half life is defined as the period it
-takes a series  to reach half its long-term average values.
+takes a series to reach half its long-term average values.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/methods.R
 \name{tsconvert}
 \alias{tsconvert}
-\title{Conversion method from one model to another}
+\title{Conversion method from one object to another}
 \usage{
 tsconvert(object, ...)
 }
@@ -11,6 +11,15 @@ tsconvert(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The converted object.
+}
 \description{
-Special purpose function for converting one model to another.
+Generic special purpose method for converting one object to another.
+}
+\details{
+This method can be used to convert one model to another when those
+models are related, one set of parameters to a different parameterization, or
+any other use case which involves some meaningful conversion in the context
+of the model being implemented for.
 }

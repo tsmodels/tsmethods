@@ -9,3 +9,4 @@ cleanup
 ^\.Rproj\.user$
 ^codecov\.yml$
 ^\.github$
+README.md

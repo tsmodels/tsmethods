@@ -21,9 +21,11 @@ the ensembling predictions which represent the ensembling weights.}
 \value{
 An object of class \dQuote{tsmodel.predict} or \dQuote{tsmodel.distribution} 
 depending on the input class in \code{\link{ensemble_modelspec}}.
+
+The ensembled distribution.
 }
 \description{
-Ensembles posterior predictive or simulated distributions 
+Generic method for ensembles of posterior predictive or simulated distributions 
 spanning the same forecast horizon.
 }
 \details{

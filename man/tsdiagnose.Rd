@@ -11,6 +11,9 @@ tsdiagnose(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The model diagnostics.
+}
 \description{
-Extracts the diagnostics from an object.
+Generic method for extracting the diagnostics from an object.
 }

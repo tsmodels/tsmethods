@@ -2,15 +2,18 @@
 % Please edit documentation in R/methods.R
 \name{estimate}
 \alias{estimate}
-\title{Estimation Method}
+\title{Model Estimation}
 \usage{
 estimate(object, ...)
 }
 \arguments{
-\item{object}{an object.}
+\item{object}{an object of the model specification.}
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+An object holding the results of the estimated model.
+}
 \description{
-Estimation Method
+Generic method for estimating (fitting) a model.
 }

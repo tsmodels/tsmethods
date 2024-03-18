@@ -11,6 +11,9 @@ tscalibrate(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+An object with details of the calibrated target.
+}
 \description{
-Calibrates a model targeting specific objectives.
+Generic method for calibrating a model, targeting specific objectives.
 }

@@ -20,6 +20,11 @@ rate of change and \dQuote{log} the difference in logs.}
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+an object of class \dQuote{tsmodel.predict} transformed to a growth distribution.
+
+The growth distribution.
+}
 \description{
-Calculates the growth distribution from a predicted object.
+Generic method for calculating the growth distribution from an object.
 }

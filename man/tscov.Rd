@@ -11,7 +11,10 @@ tscov(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+A covariance matrix or array of matrices (time varying) or other custom object related to this.
+}
 \description{
-Extracts the covariance matrix from a multivariate model or the
+Generic method for extracting the covariance matrix from a multivariate model or the
 autocovariance matrix of a univariate model.
 }

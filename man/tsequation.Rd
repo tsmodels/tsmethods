@@ -11,7 +11,10 @@ tsequation(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The model equation(s) in a specified format.
+}
 \description{
-Extract the equation of a model into either latex or some 
-other format.
+Generic method for extracting the equation of a model into either 
+latex or some other format.
 }

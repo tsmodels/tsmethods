@@ -12,8 +12,8 @@ unconditional(object, ...)
 \item{...}{additional parameters passed to the method.}
 }
 \value{
-A scalar of the unconditional value.
+The unconditional value or values (e.g. mean and variance).
 }
 \description{
-General method the unconditional value of a model.
+Generic method for extracting the unconditional value of a model.
 }

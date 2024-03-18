@@ -11,6 +11,10 @@ estimate_ad(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The estimated autodiff model.
+}
 \description{
-Estimates a model using automatic differentiation.
+Generic method for estimating a model using automatic differentiation. This
+may be deprecated in the future in favor of just using the estimate method.
 }

@@ -11,6 +11,9 @@ tsbacktest(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+An object holding the results of the backtest.
+}
 \description{
-Backtesting of a time series model.
+Generic method for backtesting of a time series model.
 }

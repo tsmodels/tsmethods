@@ -99,6 +99,9 @@ upto the user to supply what this should be.}
 \item{n_original}{the number of time periods from the end to plot for the 
 original series. Defaults to plotting the whole series.}
 }
+\value{
+a plot of the predicted distribution.
+}
 \description{
 Plots for objects generated from probabilistic models returning 
 a forecast distribution.
@@ -111,4 +114,25 @@ function which can generate a nice distribution plot. The \dQuote{tsmodel.predic
 is a list with the posterior predictive (or simulated) distribution 
 (the \dQuote{tsmodel.distribution}) in addition to the original series 
 (original.series) of class zoo or xts.
+}
+\examples{
+library(xts)
+months <- c("01","02","03","04","05","06","07","08","09","10","11","12")
+dates <- as.Date(paste0(sort(rep(1973:1978, 12)),"-",rep(months, 6), "-",rep("01",12*6)))
+y <- xts(as.numeric(USAccDeaths), dates)
+samples <- do.call(cbind, lapply(1:12, 
+function(i){sample(as.numeric(y[format(index(y),"\%m") == months[i]]), 100, replace = TRUE)}))
+predict_dates <- as.Date(paste0(rep(1979, 12),"-",months, "-",rep("01",12)))
+expected_value <- colMeans(samples)
+p <- list()
+colnames(samples) <- as.character(predict_dates)
+class(samples) <- "tsmodel.distribution"
+p$original_series <- y
+p$distribution <- samples
+p$mean <- xts(expected_value, predict_dates)
+class(p) <- "tsmodel.predict"
+actuals_available <- c(7798,7406,8363,8460,9217,9316)
+plot(p, main = "USAccDeaths Resample Based Forecast", n_original = 12*3, 
+gradient_color = "orange", interval_color = "deepskyblue", median_width = 1.5)
+points(predict_dates[1:6], actuals_available, col = "green", cex = 1.5)
 }

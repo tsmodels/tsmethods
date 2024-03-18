@@ -12,10 +12,10 @@ pit(object, ...)
 \item{...}{additional parameters passed to the method.}
 }
 \value{
-An xts vector of the conditional probabilities.
+The conditional probabilities.
 }
 \description{
-Calculates and returns the conditional probability integral
+Generic method for calculating the conditional probability integral
 transform given the data and estimated density
 }
 \details{

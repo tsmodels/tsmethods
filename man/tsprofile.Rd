@@ -11,7 +11,10 @@ tsprofile(object, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The profiled model with information such as root mean squared error per parameter.
+}
 \description{
-Profiles a time series model by simulating from the estimated 
-DGP and measuring the performance under different levels of system noise.
+Generic method for profiling a time series model by simulating from the estimated 
+data generating process and measuring the performance under different levels of system noise.
 }

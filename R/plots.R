@@ -35,6 +35,7 @@
 #' is a list with the posterior predictive (or simulated) distribution 
 #' (the \dQuote{tsmodel.distribution}) in addition to the original series 
 #' (original.series) of class zoo or xts.
+#' @returns a plot of the predicted distribution.
 #' @method plot tsmodel.distribution
 #' @rdname plot
 #' @aliases tsmodel.distribution tsmodel.predict
@@ -97,6 +98,26 @@ plot.tsmodel.distribution <- function(x, y = NULL, median_color = "black", media
 #' @method plot tsmodel.predict
 #' @rdname plot
 #' @aliases plot.tsmodel.distribution tsmodel.predict
+#' @examples
+#' library(xts)
+#' months <- c("01","02","03","04","05","06","07","08","09","10","11","12")
+#' dates <- as.Date(paste0(sort(rep(1973:1978, 12)),"-",rep(months, 6), "-",rep("01",12*6)))
+#' y <- xts(as.numeric(USAccDeaths), dates)
+#' samples <- do.call(cbind, lapply(1:12, 
+#' function(i){sample(as.numeric(y[format(index(y),"%m") == months[i]]), 100, replace = TRUE)}))
+#' predict_dates <- as.Date(paste0(rep(1979, 12),"-",months, "-",rep("01",12)))
+#' expected_value <- colMeans(samples)
+#' p <- list()
+#' colnames(samples) <- as.character(predict_dates)
+#' class(samples) <- "tsmodel.distribution"
+#' p$original_series <- y
+#' p$distribution <- samples
+#' p$mean <- xts(expected_value, predict_dates)
+#' class(p) <- "tsmodel.predict"
+#' actuals_available <- c(7798,7406,8363,8460,9217,9316)
+#' plot(p, main = "USAccDeaths Resample Based Forecast", n_original = 12*3, 
+#' gradient_color = "orange", interval_color = "deepskyblue", median_width = 1.5)
+#' points(predict_dates[1:6], actuals_available, col = "green", cex = 1.5)
 #' @export
 plot.tsmodel.predict <- function(x, y = NULL, plot_original = TRUE, median_color = "black", median_type = 1,
                               median_width = 3, interval_quantiles = c(0.025, 0.975),

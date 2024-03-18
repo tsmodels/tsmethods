@@ -15,6 +15,9 @@ tsfilter(object, y, newxreg = NULL, ...)
 
 \item{...}{additional parameters passed to the method.}
 }
+\value{
+The filtered value(s).
+}
 \description{
-Extracts the diagnostics from an object.
+Generic method for (online) time series filtering.
 }
