@@ -1,3 +1,12 @@
+# tsmethods 1.0.2
+
+* Added a distribution_list function to validate and return
+an object of class `tsmodel.distribution_list` which hold a
+validated list of `tsmodel.distribution` objects for use in
+multivariate models.
+* Added method to convert tsmodel.distribution and tsmodel.distribution_list
+objects to a long form data table for easier export to databases.
+
 # tsmethods 1.0.1
 
 * Added a `NEWS.md` file to track changes to the package.
