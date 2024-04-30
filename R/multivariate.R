@@ -57,7 +57,7 @@ distribution_list <- function(distributions = NULL, names = NULL)
         check_dates <- sapply(2:m, function(i) {
             all.equal(date_ref, colnames(distributions[[i]]))
         })
-        if (check_dates) equal_horizon <- TRUE else equal_horizon <- FALSE
+        if (all(check_dates)) equal_horizon <- TRUE else equal_horizon <- FALSE
     } else {
         equal_horizon <- FALSE
     }
