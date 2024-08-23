@@ -394,3 +394,61 @@ halflife <- function(object, ...)
 {
     UseMethod("halflife")
 }
+
+#' Convolution of Distributions
+#'
+#' @description Generic method for convolution of conditional distribution.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The convolved density.
+#' @details The method is meant to apply the Fast Fourier Transform
+#' to the characteristic function of a distribution. Applications of this can
+#' be found in the Independent Factor Conditional Density Models.
+#' @aliases tsconvolve
+#' @rdname tsconvolve
+#' @export
+#'
+#
+tsconvolve <- function(object, ...)
+{
+    UseMethod("tsconvolve")
+}
+
+#' Co-Skewness
+#'
+#' @description Generic method for the co-skewness of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The co-skewness tensor (folded or unfolded). 
+#' @details The method calculates the conditional co-skewness of a model.
+#' Applications of this can be found in the Independent Factor Conditional 
+#' Density Models.
+#' @aliases tscoskew
+#' @rdname tscoskew
+#' @export
+#'
+#
+tscoskew <- function(object, ...)
+{
+    UseMethod("tscoskew")
+}
+
+
+#' Co-Kurtosis
+#'
+#' @description Generic method for the co-kurtosis of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The co-kurtosis tensor (folded or unfolded). 
+#' @details The method calculates the conditional co-kurtosis of a model.
+#' Applications of this can be found in the Independent Factor Conditional 
+#' Density Models.
+#' @aliases tscokurt
+#' @rdname tscokurt
+#' @export
+#'
+#
+tscokurt <- function(object, ...)
+{
+    UseMethod("tscokurt")
+}

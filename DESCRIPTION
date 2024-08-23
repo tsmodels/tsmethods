@@ -2,7 +2,7 @@ Package: tsmethods
 Type: Package
 Title: Time Series Methods
 Version: 1.0.2
-Date: 2024-04-01
+Date: 2024-08-23
 Authors@R: c(person("Alexios", "Galanos", role = c("aut", "cre","cph"), email = "alexios@4dscape.com"))
 Maintainer: Alexios Galanos <alexios@4dscape.com>
 Description: Generic methods for use in a time series probabilistic framework, allowing for a common calling convention across packages. Additional methods for time series prediction ensembles and probabilistic plotting of predictions is included. A more detailed description is available at <https://www.nopredict.com/packages/tsmethods> which shows the currently implemented methods in the 'tsmodels' framework. 
@@ -11,7 +11,7 @@ Imports: methods, zoo, xts, data.table
 Encoding: UTF-8
 LazyData: true
 URL: https://www.nopredict.com/packages/tsmethods, https://github.com/tsmodels/tsmethods
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
