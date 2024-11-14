@@ -10,3 +10,4 @@ cleanup
 ^codecov\.yml$
 ^\.github$
 README.md
+^logo\.png$

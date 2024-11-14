@@ -1,7 +1,7 @@
 # tsmethods 1.0.2
 
 * Added a distribution_list function to validate and return
-an object of class `tsmodel.distribution_list` which hold a
+an object of class `tsmodel.distribution_list` which holds a
 validated list of `tsmodel.distribution` objects for use in
 multivariate models.
 * Added method to convert tsmodel.distribution and tsmodel.distribution_list
