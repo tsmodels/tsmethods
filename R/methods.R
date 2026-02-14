@@ -452,3 +452,203 @@ tscokurt <- function(object, ...)
 {
     UseMethod("tscokurt")
 }
+
+#' Add a polynomial component to specification
+#'
+#' @description Generic method for the polynomial component  of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a polynomial component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a polyomial component to the specification.
+#' @aliases add_polynomial
+#' @rdname add_polynomial
+#' @export
+#'
+#
+add_polynomial <- function(object, ...)
+{
+  UseMethod("add_polynomial")
+}
+
+#' Add a regressor component to specification
+#'
+#' @description Generic method for the regressor component of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a regressor component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a regressor component to the specification.
+#' @aliases add_regressor
+#' @rdname add_regressor
+#' @export
+#'
+#
+add_regressor <- function(object, ...)
+{
+  UseMethod("add_regressor")
+}
+
+#' Add an anomaly component to specification
+#'
+#' @description Generic method for identified anomaly component (such as outliers) of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with an anomaly component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding an anomaly component to the specification, separate
+#' from the regressor components.
+#' @aliases add_anomaly
+#' @rdname add_anomaly
+#' @export
+#'
+#
+add_anomaly <- function(object, ...)
+{
+  UseMethod("add_anomaly")
+}
+
+#' Add a seasonal component to specification
+#'
+#' @description Generic method for the seasonal component of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a seasonal component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a seasonal component to the specification.
+#' @aliases add_seasonal
+#' @rdname add_seasonal
+#' @export
+#'
+#
+add_seasonal <- function(object, ...)
+{
+  UseMethod("add_seasonal")
+}
+
+#' Add an autoregressive (AR) component to specification
+#'
+#' @description Generic method for the AR component  of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with an AR component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding an AR component to the specification.
+#' @aliases add_ar
+#' @rdname add_ar
+#' @export
+#'
+#
+add_ar <- function(object, ...)
+{
+  UseMethod("add_ar")
+}
+#' Add a moving average (MA) component to specification
+#'
+#' @description Generic method for the MA component  of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a MA component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a MA component to the specification.
+#' @aliases add_ma
+#' @rdname add_ma
+#' @export
+#'
+add_ma <- function(object, ...)
+{
+  UseMethod("add_ma")
+}
+#' Add an autoregressive moving average (ARMA) component to specification
+#'
+#' @description Generic method for the ARMA component  of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with an ARMA component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding an ARMA component to the specification.
+#' @aliases add_arma
+#' @rdname add_arma
+#' @export
+#'
+#
+add_arma <- function(object, ...)
+{
+  UseMethod("add_arma")
+}
+
+
+#' Add a custom component to specification
+#'
+#' @description Generic method for a custom component of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a custom component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a custom component to the specification.
+#' @aliases add_custom
+#' @rdname add_custom
+#' @export
+#'
+#
+add_custom <- function(object, ...)
+{
+  UseMethod("add_custom")
+}
+
+#' Add a data transformation to specification
+#'
+#' @description Generic method for a data transformation of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a data transformation. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a data transformation to the specification.
+#' @aliases add_transform
+#' @rdname add_transform
+#' @export
+#'
+#
+add_transform <- function(object, ...)
+{
+  UseMethod("add_transform")
+}
+
+
+
+#' Add an error distribution component to specification
+#'
+#' @description Generic method for the distribution component of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a distribution component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a specific distribution component to the specification.
+#' @aliases add_distribution
+#' @rdname add_distribution
+#' @export
+#'
+#
+add_distribution <- function(object, ...)
+{
+  UseMethod("add_distribution")
+}
+
+
+#' Add a holiday component to specification
+#'
+#' @description Generic method for the holiday component of a model.
+#' @param object an object.
+#' @param ... additional parameters passed to the method.
+#' @returns The specification object with a holiday component. 
+#' @details The method is used in state space estimation and simulation
+#' models for adding a holiday component to the specification.
+#' @aliases add_holiday
+#' @rdname add_holiday
+#' @export
+#'
+#
+add_holiday <- function(object, ...)
+{
+  UseMethod("add_holiday")
+}

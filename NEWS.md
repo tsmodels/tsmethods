@@ -1,3 +1,8 @@
+# tsmethods 1.0.3
+
+* Added a number of new generic methods to be used in tsaux and upcoming
+tsbsm package.
+
 # tsmethods 1.0.2
 
 * Added a distribution_list function to validate and return

@@ -5,7 +5,6 @@
 
 *.dll
 *.exe
-*.log
 *.lp
 *.o
 *.so

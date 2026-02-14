@@ -6,6 +6,8 @@
 \alias{tsmethods-package}
 \title{tsmethods: Time Series Methods}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Generic methods for use in a time series probabilistic framework, allowing for a common calling convention across packages. Additional methods for time series prediction ensembles and probabilistic plotting of predictions is included. A more detailed description is available at \url{https://www.nopredict.com/packages/tsmethods} which shows the currently implemented methods in the 'tsmodels' framework.
 }
 \seealso{

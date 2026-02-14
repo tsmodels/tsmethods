@@ -1,7 +1,7 @@
 #' @keywords internal
 #' @import methods
 #' @import data.table
-#' @importFrom stats na.omit ts median quantile fitted
+#' @importFrom stats na.omit ts median quantile fitted optimize sd
 #' @importFrom utils tail head data
 #' @importFrom graphics hist grid legend lines par plot points abline axis axis.Date axis.POSIXct box polygon layout
 #' @importFrom grDevices gray colorRampPalette n2mfrow col2rgb rgb
